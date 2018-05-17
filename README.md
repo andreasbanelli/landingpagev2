@@ -1,24 +1,29 @@
-# README
+Ce projet a été crée par Andréas
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Le projet : Playlist.io va ranger et organiser vos vidéos sur Youtube à votre place de manière intelligente
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+Pré-requis et installation :
 
-* Configuration
+1 - Veuillez cloner ce repo sur votre machine 
+2 - Se rendre dans le dossier souhaité, et effectuer cette ligne de commandes suivante pour initialiser le fonctionnement :
 
-* Database creation
+  $ bundle install --without production && rails db:migrate
 
-* Database initialization
+La conception
+Je suis parti de cette v1 de la Lp : https://protected-everglades-17217.herokuapp.com
+j'ai voulu l'améliorer mais cela n'a pas marché sur Heroku. 
 
-* How to run the test suite
+Voilà les améliorations ajoutées. 
 
-* Services (job queues, cache servers, search engines, etc.)
+- utilisation de oauth de google : j'ai ajouté un signin/login via un compte google. 
+- utilisation de la gem figaro, cela me permet de cacher mes passwords/id quand je push sur github
+- action mailer : chaques users reçoit un mail de bienvenu quand il s'inscrit sur le site. 
 
-* Deployment instructions
+Il y a des choses à revoir, les animations javascript ne sont pas passées, l'image du background n'est pas centrée comme voulu.
 
-* ...
+
+Acquisition d'une base de données de users
+
+création d'un bot twitter qui envoie un tweet à chaque personne qui utilise le mot "youtube" ou "soundcloud". 
