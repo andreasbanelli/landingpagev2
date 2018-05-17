@@ -19,7 +19,7 @@ gem 'autoprefixer-rails'
 gem 'omniauth-google-oauth2'
 gem "figaro"
 gem 'jquery-rails'
-  gem 'pg'
+
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -67,6 +67,10 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+end
+
+group :production do
+  gem 'pg', '0.20.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
